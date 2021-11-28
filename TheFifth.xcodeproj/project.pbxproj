@@ -13,6 +13,8 @@
 		9122F171275384C900325880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9122F16F275384C900325880 /* Main.storyboard */; };
 		9122F173275384CE00325880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9122F172275384CE00325880 /* Assets.xcassets */; };
 		9122F176275384CE00325880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9122F174275384CE00325880 /* LaunchScreen.storyboard */; };
+		9122F17E2753854E00325880 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9122F17D2753854E00325880 /* UITextField+Ext.swift */; };
+		9122F18027538E2300325880 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9122F17F27538E2300325880 /* MyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9122F172275384CE00325880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9122F175275384CE00325880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9122F177275384CE00325880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9122F17D2753854E00325880 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
+		9122F17F27538E2300325880 /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				9122F16B275384C900325880 /* SceneDelegate.swift */,
 				9122F16D275384C900325880 /* ViewController.swift */,
 				9122F16F275384C900325880 /* Main.storyboard */,
+				9122F17F27538E2300325880 /* MyTextField.swift */,
+				9122F17D2753854E00325880 /* UITextField+Ext.swift */,
 				9122F172275384CE00325880 /* Assets.xcassets */,
 				9122F174275384CE00325880 /* LaunchScreen.storyboard */,
 				9122F177275384CE00325880 /* Info.plist */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9122F18027538E2300325880 /* MyTextField.swift in Sources */,
 				9122F16E275384C900325880 /* ViewController.swift in Sources */,
 				9122F16A275384C900325880 /* AppDelegate.swift in Sources */,
 				9122F16C275384C900325880 /* SceneDelegate.swift in Sources */,
+				9122F17E2753854E00325880 /* UITextField+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
