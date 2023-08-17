@@ -62,15 +62,39 @@
 			children = (
 				9122F169275384C900325880 /* AppDelegate.swift */,
 				9122F16B275384C900325880 /* SceneDelegate.swift */,
-				9122F16D275384C900325880 /* ViewController.swift */,
-				9122F16F275384C900325880 /* Main.storyboard */,
-				9122F17F27538E2300325880 /* MyTextField.swift */,
-				9122F17D2753854E00325880 /* UITextField+Ext.swift */,
+				9148C3FE2A8DAE5700D0699C /* Controller */,
+				9148C3FC2A8DAE2F00D0699C /* View */,
+				9148C3FD2A8DAE3C00D0699C /* Extension */,
 				9122F172275384CE00325880 /* Assets.xcassets */,
 				9122F174275384CE00325880 /* LaunchScreen.storyboard */,
 				9122F177275384CE00325880 /* Info.plist */,
 			);
 			path = TheFifth;
+			sourceTree = "<group>";
+		};
+		9148C3FC2A8DAE2F00D0699C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9122F16F275384C900325880 /* Main.storyboard */,
+				9122F17F27538E2300325880 /* MyTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9148C3FD2A8DAE3C00D0699C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9122F17D2753854E00325880 /* UITextField+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9148C3FE2A8DAE5700D0699C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9122F16D275384C900325880 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
