@@ -10,28 +10,30 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var myTextField: MyTextField!
     
-    let button: UIButton = {
-        let screenWidth = UIScreen.main.bounds.width
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
-        button.setTitle("我是按鈕", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-        button.backgroundColor = .orange
-        button.layer.cornerRadius = 50/2
-        
-        let action = UIAction { act in
-            print("Hello World")
-        }
-        button.center = CGPoint(x: screenWidth/2, y: screenWidth/2)
-        button.addAction(action, for: .touchUpInside)
-       return button
-    }()
+//    let button: UIButton = {
+//        let screenWidth = UIScreen.main.bounds.width
+//        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
+//        button.setTitle("我是按鈕", for: .normal)
+//        button.setTitleColor(.blue, for: .normal)
+//        button.backgroundColor = .orange
+//        button.layer.cornerRadius = 50/2
+//
+//        let action = UIAction { act in
+//            print("Hello World!")
+//        }
+//        button.center = CGPoint(x: screenWidth/2, y: screenWidth/2)
+//        button.addAction(action, for: .touchUpInside)
+//       return button
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(button)
+//        view.addSubview(button)
+        myTextField.delegate = self
+        
 //        myTextField.leftViewMode = .always
 //        myTextField.leftView = UIImageView(image: UIImage(systemName: "pencil"))
-                
+//
 //        let screenWidth = UIScreen.main.bounds.width
 //        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 216))
 //        datePicker.datePickerMode = .date
@@ -43,9 +45,12 @@ class ViewController: UIViewController {
 //        }
 //
 //        let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 44.0))
-//        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-//        let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: #selector(tapCancel))
-//        let barButton = UIBarButtonItem(title: "Done", style: .plain, target: target, action: #selector(tapDone))
+//        let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: nil,
+//                                     action: #selector(tapCancel))
+//        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil,
+//                                       action: nil)
+//        let barButton = UIBarButtonItem(title: "Done", style: .plain, target: target,
+//                                        action: #selector(tapDone))
 //        toolBar.setItems([cancel, flexible, barButton], animated: false)
 //        myTextField.inputAccessoryView = toolBar
 //        myTextField.inputView = datePicker
@@ -55,6 +60,10 @@ class ViewController: UIViewController {
 
     }
 
+    @IBAction func tapTextField(_ sender: UITextField) {
+        print("Tap Textfield.")
+    }
+    
     
     @objc func doneTapped() {
         if let datePicker = myTextField.inputView as? UIDatePicker {
@@ -73,5 +82,13 @@ class ViewController: UIViewController {
 //        myTextField.resignFirstResponder()
 //    }
 
+}
+
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("\(textField.gestureRecognizers?.count)")
+    }
+    
 }
 
